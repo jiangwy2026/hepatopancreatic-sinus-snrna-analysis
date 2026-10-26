@@ -92,25 +92,24 @@ Key scripts:
 - `286_ligand_specificity.py`
 - `268_supp7_receptor_group.py`
 
-## 6. Supplementary tables S7-S19
+## 6. Supplementary tables S7-S18
 
 Regenerate the source tables in three stages:
 
 ```powershell
 python analysis_output/scripts/324a_build_S7_S12.py
 python analysis_output/scripts/324b_build_S13_S18.py
-python analysis_output/scripts/324c_build_S19.py
 python analysis_output/scripts/325_combine_validate_tables.py
-python analysis_output/scripts/326_validate_S7_S19_workbook.py
+python analysis_output/scripts/326_validate_S7_S18_workbook.py
 ```
 
-`324a` creates sample metadata, nucleus metadata, QC, state markers, PH-substate markers and composition statistics. `324b` creates state-level differential expression, pseudotime bins, external-program scoring, candidate communication, orthology mapping and ITGB1 summaries. `324c` creates Figure 1-6 source-data sheets.
+`324a` creates sample metadata, nucleus metadata, QC, state markers, PH-substate markers and composition statistics. `324b` creates state-level differential expression, pseudotime bins, external-program scoring, candidate communication, orthology mapping and ITGB1 summaries. `324c_build_S19.py` is retained in the script archive but is not part of the current S7-S18 release.
 
 Table rules:
 
 - Existing Table S1-S6 are retained unchanged.
 - New tables begin at Table S7.
-- Table S19 is split into `S19_Fig1` through `S19_Fig6`.
+- Table S19 is deferred and is not included in the current S7-S18 release.
 - Missing measurements are left blank and explained in `notes`; no values are imputed.
 
 ## 7. Manuscript rebuild
@@ -129,7 +128,7 @@ The script:
 - Aligns the six result headings and six figure captions.
 - Rewrites the Figure 5 legend to include panel G.
 - Rewrites the Figure 6 legend to match the current A-F panels.
-- Updates references to Tables S7-S19.
+- Updates references to Tables S7-S18.
 
 ## 8. Statistical interpretation
 
@@ -148,5 +147,5 @@ The script:
 - Sum of retained nuclei in Tables S8, S9 and S12.
 - PH substate counts and PH-only pseudotime bins.
 - P-value ranges.
-- Presence of every Table S7-S19 reference in the revised manuscript.
+- Presence of every Table S7-S18 reference in the revised manuscript.
 - Workbook headers, row counts and spot-checked values against the source JSON.

@@ -1,6 +1,6 @@
 # Supplementary table catalog
 
-Existing Tables S1-S6 are retained. The tables below start at S7.
+Existing Tables S1-S6 are retained. The current release includes Tables S7-S18. Table S19 is deferred.
 
 | Sheet | Rows | Columns | Title |
 |---|---:|---:|---|
@@ -16,12 +16,6 @@ Existing Tables S1-S6 are retained. The tables below start at S7.
 | S16 | 104 | 13 | Table S16. Ligand-receptor communication |
 | S17 | 21 | 6 | Table S17. LR orthology mapping |
 | S18 | 14 | 6 | Table S18. ITGB1 expression summary |
-| S19_Fig1 | 20 | 10 | Table S19-1. Figure 1 source data |
-| S19_Fig2 | 5 | 10 | Table S19-2. Figure 2 source data |
-| S19_Fig3 | 4 | 10 | Table S19-3. Figure 3 source data |
-| S19_Fig4 | 7 | 10 | Table S19-4. Figure 4 source data |
-| S19_Fig5 | 19,548 | 10 | Table S19-5. Figure 5 source data |
-| S19_Fig6 | 2,129 | 10 | Table S19-6. Figure 6 source data |
 
 ## Notes
 

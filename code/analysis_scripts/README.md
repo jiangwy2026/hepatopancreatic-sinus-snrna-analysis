@@ -12,7 +12,7 @@ This directory is an archive of project analysis scripts. Script numbers indicat
 | PH substates and trajectory | `248_step2_trajectory_projection.py`, `249_step2_group_stats.py`, `288_ph_substate_composition.py`, `289_ph_substate_marker_check.py`, `307_export_fig2d_ph_tsne_final.py` |
 | External progenitor programs | `250_step3_lyo_program_mirror.py`, `293_cross_organ_adjusted_progenitor.py`, `295_supp14_lyo_marker_mirror.py` |
 | Candidate communication | `231_step1_communication.py`, `232_step1_communication_validated.py`, `247_step1_communication_sonicparanoid.py`, `281_lr_sensitivity.py`, `286_ligand_specificity.py`, `268_supp7_receptor_group.py` |
-| S7-S19 table generation | `324a_build_S7_S12.py`, `324b_build_S13_S18.py`, `324c_build_S19.py`, `325_combine_validate_tables.py`, `326_validate_S7_S19_workbook.py` |
+| S7-S18 table generation | `324a_build_S7_S12.py`, `324b_build_S13_S18.py`, `325_combine_validate_tables.py`, `326_validate_S7_S18_workbook.py` |
 | Manuscript rebuild and validation | `327_revise_manuscript_final.py`, `328_final_validation.py` |
 
 ## Path assumptions

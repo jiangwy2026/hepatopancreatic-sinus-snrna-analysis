@@ -6,7 +6,7 @@ import openpyxl
 import pandas as pd
 
 root=Path(r"D:\桌面\single cell\修订交付_2026-10-26_v2")
-payload=json.loads((root/"source_tables"/"supplementary_tables.json").read_text(encoding="utf-8"))
+payload=json.loads((root/"source_tables"/"supplementary_tables.json").read_text(encoding="utf-8")); payload["tables"]=[x for x in payload["tables"] if not x["sheet"].startswith("S19_")]
 t={x["sheet"]:x for x in payload["tables"]}
 issues=[]
 
@@ -35,13 +35,13 @@ for sheet in ["S10","S11","S13"]:
         assert 0 <= r[pidx] <= 1 and 0 <= r[pidx-1] <= 1
 for r in t["S16"]["rows"]:
     assert r[9] is None or 0 <= r[9] <= 1
-# All S7-S19 labels are present in the manuscript.
-docx_text='\n'.join(__import__('docx').Document(root/"manuscripts_1026_revised_final_2026-10-26.docx").paragraphs[i].text for i in range(len(__import__('docx').Document(root/"manuscripts_1026_revised_final_2026-10-26.docx").paragraphs)))
-for n in range(7,20):
+# All S7-S18 labels are present in the manuscript.
+docx_text='\n'.join(__import__('docx').Document(root/"manuscripts_1026_revised_final_2026-10-26_noS19.docx").paragraphs[i].text for i in range(len(__import__('docx').Document(root/"manuscripts_1026_revised_final_2026-10-26_noS19.docx").paragraphs)))
+for n in range(7,19):
     if f"Table S{n}" not in docx_text: issues.append(f"manuscript lacks Table S{n}")
 
 # Workbook row/header integrity and source-value spot checks.
-wb=openpyxl.load_workbook(root/"Supplementary_Tables_S7-S19_2026-10-26.xlsx",read_only=True,data_only=True)
+wb=openpyxl.load_workbook(root/"Supplementary_Tables_S7-S18_2026-10-26.xlsx",read_only=True,data_only=True)
 for sheet,spec in t.items():
     ws=wb[sheet]
     it=ws.iter_rows(values_only=True)

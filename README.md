@@ -7,8 +7,8 @@ The analysis combines BrdU/FACS validation, plasma metabolomics and proteomics, 
 ## Repository contents
 
 - `code/analysis_scripts/` - analysis scripts used across preprocessing, quality control, clustering, marker detection, trajectory analysis, communication, cross-organ scoring, table construction and validation.
-- `tables/Supplementary_Tables_S7-S19_2026-10-26.xlsx` - combined supplementary workbook. Tables S1-S6 are existing tables and are not duplicated here.
-- `tables/source_data/` - CSV versions of the source data used to build Tables S7-S19.
+- `tables/Supplementary_Tables_S7-S18_2026-10-26.xlsx` - combined supplementary workbook. Tables S1-S6 are existing tables and are not duplicated here.
+- `tables/source_data/` - CSV versions of the source data used to build Tables S7-S18.
 - `figures/Figure5_panels/` - editable panel exports for manuscript Figure 5.
 - `figures/Figure6_panels/` - editable panel exports for manuscript Figure 6.
 - `docs/analysis_workflow.md` - command-level analysis order and software requirements.

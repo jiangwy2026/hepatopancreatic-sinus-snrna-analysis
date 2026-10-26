@@ -48,7 +48,7 @@ The revised Figure 6 legend now matches all six panels:
 
 ## Supplementary-table numbering
 
-Existing Tables S1-S6 were retained. New tables were assigned S7-S19:
+Existing Tables S1-S6 were retained. New tables were assigned S7-S18; Table S19 is deferred:
 
 | Table | Content |
 |---|---|
@@ -64,7 +64,7 @@ Existing Tables S1-S6 were retained. New tables were assigned S7-S19:
 | S16 | Ligand-receptor communication |
 | S17 | Ligand-receptor orthology mapping |
 | S18 | ITGB1 expression summary |
-| S19 | Figure source data, split into Fig1-Fig6 sheets |
+
 
 ## Data limits recorded in the tables
 
