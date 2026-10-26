@@ -44,3 +44,7 @@ The primary Python environment is described in `environment/requirements.txt`. T
 ## Citation
 
 Please cite the accompanying manuscript when available. Repository author and license information should be completed by the corresponding author before public release.
+
+## Code availability
+
+All analysis scripts and supplementary source data are publicly available at https://github.com/jiangwy2026/hepatopancreatic-sinus-snrna-analysis (release `v2026.10.26-final`).
