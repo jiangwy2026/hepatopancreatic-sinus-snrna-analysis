@@ -1,0 +1,15 @@
+﻿group,mean_log_normalized_expression,pct_positive,median_expression,n_nuclei,notes
+PH,0.10892492,7.567049808429119,0.0,1044,Mean of the two annotated ITGB1 orthologs (GeneIDs 113830322 and 113805715); positive means expression >0.
+GH,0.11066304,8.41313269493844,0.0,1462,Mean of the two annotated ITGB1 orthologs (GeneIDs 113830322 and 113805715); positive means expression >0.
+TS,0.076487556,5.3827487315243765,0.0,4533,Mean of the two annotated ITGB1 orthologs (GeneIDs 113830322 and 113805715); positive means expression >0.
+MH2,0.103438415,7.351225204200699,0.0,857,Mean of the two annotated ITGB1 orthologs (GeneIDs 113830322 and 113805715); positive means expression >0.
+F,0.07259255,5.305039787798409,0.0,377,Mean of the two annotated ITGB1 orthologs (GeneIDs 113830322 and 113805715); positive means expression >0.
+R,0.1648155,11.538461538461538,0.0,338,Mean of the two annotated ITGB1 orthologs (GeneIDs 113830322 and 113805715); positive means expression >0.
+B,0.071420185,4.845814977973569,0.0,227,Mean of the two annotated ITGB1 orthologs (GeneIDs 113830322 and 113805715); positive means expression >0.
+M,0.12078991,8.88888888888889,0.0,45,Mean of the two annotated ITGB1 orthologs (GeneIDs 113830322 and 113805715); positive means expression >0.
+MyoEpi,0.022951901,1.5384615384615385,0.0,65,Mean of the two annotated ITGB1 orthologs (GeneIDs 113830322 and 113805715); positive means expression >0.
+PM-like,0.12382672,10.56338028169014,0.0,710,Mean of the two annotated ITGB1 orthologs (GeneIDs 113830322 and 113805715); positive means expression >0.
+Niche (TS/MH2/MyoEpi/M),0.08041677,5.672727272727273,0.0,5500,Mean of the two annotated ITGB1 orthologs (GeneIDs 113830322 and 113805715); positive means expression >0.
+Hepatopancreas-like (F/R/B),0.105400644,7.43099787685775,0.0,942,Mean of the two annotated ITGB1 orthologs (GeneIDs 113830322 and 113805715); positive means expression >0.
+Other (PM-like),0.12382672,10.56338028169014,0.0,710,Mean of the two annotated ITGB1 orthologs (GeneIDs 113830322 and 113805715); positive means expression >0.
+All Hs nuclei,0.09370507,6.8233588734727695,0.0,9658,Mean of the two annotated ITGB1 orthologs (GeneIDs 113830322 and 113805715); positive means expression >0.

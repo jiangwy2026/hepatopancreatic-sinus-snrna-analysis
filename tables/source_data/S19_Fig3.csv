@@ -1,0 +1,5 @@
+﻿figure_panel,x_variable,y_variable,group,value,statistic,p_value,p_adj,n,notes
+Fig3A-C,metabolite class,candidate metabolite count,amino-acid derivatives,28.0,count,,,,Functional candidate categories.
+Fig3A-C,metabolite class,candidate metabolite count,anti-inflammatory mediators,12.0,count,,,,Functional candidate categories.
+Fig3A-C,metabolite class,candidate metabolite count,nucleotide derivatives,15.0,count,,,,Functional candidate categories.
+Fig3D,treatment,total hemocyte count change,betaine vs PBS,,two-tailed unpaired Student t-test,0.028,,,Only betaine produced a significant increase among tested metabolites.

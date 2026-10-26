@@ -1,0 +1,26 @@
+# Large data and generated intermediates
+*.h5ad
+*.rds
+*.RDS
+*.bam
+*.bai
+*.fastq
+*.fq
+*.fastq.gz
+*.fq.gz
+*.tar
+*.tar.gz
+*.tbz2
+*.zip
+
+# Local caches and temporary outputs
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+node_modules/
+
+# Files created during local staging that are intentionally excluded
+/figures/Figure5_source_panels
+/figures/Figure6_source_panels
+/manuscripts/

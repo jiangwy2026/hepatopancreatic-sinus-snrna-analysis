@@ -1,0 +1,3 @@
+﻿sample_id,raw_barcodes,retained_nuclei,median_genes_per_nucleus,median_UMIs_per_nucleus,mito_UMI_frac_median,estimated_doublet_rate,SoupX_contamination_frac,reads_mapped_pct,Q30_pct,sequencing_saturation,notes
+Hs_control,11753,5349,561.0,1155.0,0.0631209818819404,0.0,0.314,61.4,95.2,73.3,Doublet rate = DoubletFinder calls / Cell Ranger barcodes. Q30 is RNA-read Q30. Genome mapping was 75.7%; transcriptome mapping is reported in reads_mapped_pct.
+Hs_hemospasia,8042,4309,418.0,743.0,0.06183115338882281,0.0,0.356,58.2,95.7,87.4,Doublet rate = DoubletFinder calls / Cell Ranger barcodes. Q30 is RNA-read Q30. Genome mapping was 75.5%; transcriptome mapping is reported in reads_mapped_pct.

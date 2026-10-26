@@ -1,0 +1,6 @@
+﻿figure_panel,x_variable,y_variable,group,value,statistic,p_value,p_adj,n,notes
+Fig2A,plasma compartment comparison,number of features,Hsp-up metabolites,244,count,,,6,Source: Supplemental Tables 2-3 and manuscript summary.
+Fig2A,plasma compartment comparison,number of features,Hsp-down metabolites,39,count,,,6,Source: Supplemental Tables 2-3 and manuscript summary.
+Fig2A,plasma compartment comparison,number of features,Cp-only proteins,634,count,,,6,Source: Supplemental Tables 2-3 and manuscript summary.
+Fig2A,plasma compartment comparison,number of features,Hsp-only proteins,163,count,,,6,Source: Supplemental Tables 2-3 and manuscript summary.
+Fig2A,plasma compartment comparison,number of features,Shared proteins,67,count,,,6,Source: Supplemental Tables 2-3 and manuscript summary.

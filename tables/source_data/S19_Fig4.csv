@@ -1,0 +1,8 @@
+﻿figure_panel,x_variable,y_variable,group,value,statistic,p_value,p_adj,n,notes
+Fig4A,time after hemospasia,number of DEPs,up,72,count,,,20,6 h vs 0 h; source: Supplemental Table 5 and manuscript.
+Fig4A,time after hemospasia,number of DEPs,down,104,count,,,20,6 h vs 0 h; source: Supplemental Table 5 and manuscript.
+Fig4A,time after hemospasia,number of DEPs,up,73,count,,,20,12 h vs 0 h; source: Supplemental Table 5 and manuscript.
+Fig4A,time after hemospasia,number of DEPs,down,101,count,,,20,12 h vs 0 h; source: Supplemental Table 5 and manuscript.
+Fig4A,time after hemospasia,number of DEPs,up,72,count,,,20,24 h vs 0 h; source: Supplemental Table 5 and manuscript.
+Fig4A,time after hemospasia,number of DEPs,down,102,count,,,20,24 h vs 0 h; source: Supplemental Table 5 and manuscript.
+Fig4B,time-point intersection,core DEPs,6/12/24 h shared,119,count,,,20,DEPs consistently regulated at all post-hemospasia time points.

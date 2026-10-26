@@ -1,0 +1,22 @@
+﻿ligand_or_receptor,gene_symbol,L_vannamei_GeneID,ortholog_support,SonicParanoid_cluster,notes
+ligand,DLL1,113815864,strong,4301,BLASTP best XP=XP_027223677.1; product=delta-like protein 1; identity=50.0%; coverage=72%
+receptor,FZD4,113819177,strong,6349,BLASTP best XP=XP_027234946.1; product=frizzled-4-like; identity=46.6%; coverage=87%
+receptor,FZD4,113826275,strong,6349,BLASTP best XP=XP_027234946.1; product=frizzled-4-like; identity=46.6%; coverage=87%
+receptor,FZD5,113826277,strong,3945,BLASTP best XP=XP_027234948.1; product=frizzled-5-like; identity=56.6%; coverage=98%
+receptor,ITGA4,113827435,moderate,2442,BLASTP best XP=XP_027236117.1; product=integrin alpha-PS3-like; identity=28.8%; coverage=73%
+receptor,ITGAV,113800203,strong,2539,BLASTP best XP=XP_027229606.1; product=integrin alpha-PS2-like; identity=32.4%; coverage=92%
+receptor,ITGAV,113821319,strong,2539,BLASTP best XP=XP_027229606.1; product=integrin alpha-PS2-like; identity=32.4%; coverage=92%
+receptor,ITGB1,113805715,strong,1269,"BLASTP best XP=XP_027239328.1; product=integrin beta-PS-like, transcript variant X6; identity=44.1%; coverage=99%"
+receptor,ITGB1,113830322,strong,1269,"BLASTP best XP=XP_027239328.1; product=integrin beta-PS-like, transcript variant X6; identity=44.1%; coverage=99%"
+ligand,JAG1,113821858,strong,3311,BLASTP best XP=XP_027230187.1; product=protein jagged-1b-like; identity=44.6%; coverage=86%
+ligand,LAMA1,113823054,strong,2547,BLASTP best XP=XP_027209354.1; product=laminin subunit alpha-like; identity=36.1%; coverage=99%
+ligand,LAMA1,113828881,strong,2547,BLASTP best XP=XP_027209354.1; product=laminin subunit alpha-like; identity=36.1%; coverage=99%
+receptor,NOTCH1,113802681,strong,3697,BLASTP best XP=XP_027209089.1; product=neurogenic locus Notch protein-like; identity=46.8%; coverage=90%
+ligand,POSTN,113805211,strong,557,BLASTP best XP=XP_027211977.1; product=serine-rich adhesin for platelets-like; identity=30.5%; coverage=71%
+ligand,POSTN,113817567,strong,557,BLASTP best XP=XP_027211977.1; product=serine-rich adhesin for platelets-like; identity=30.5%; coverage=71%
+ligand,THBS4,113823118,strong,924,BLASTP best XP=XP_027231548.1; product=cartilage oligomeric matrix protein-like; identity=59.9%; coverage=70%
+ligand,VWF,113824171,strong,4330,BLASTP best XP=XP_027232720.1; product=hemocytin-like; identity=32.2%; coverage=76%
+ligand,WNT5A,113805832,strong,564,BLASTP best XP=XP_027212902.1; product=protein Wnt-5b-like; identity=64.6%; coverage=88%
+ligand,WNT5A,113806005,strong,564,BLASTP best XP=XP_027212902.1; product=protein Wnt-5b-like; identity=64.6%; coverage=88%
+ligand,WNT5A,113811410,strong,564,BLASTP best XP=XP_027212902.1; product=protein Wnt-5b-like; identity=64.6%; coverage=88%
+ligand,WNT5A,113827257,strong,564,BLASTP best XP=XP_027212902.1; product=protein Wnt-5b-like; identity=64.6%; coverage=88%

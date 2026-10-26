@@ -1,0 +1,64 @@
+# -*- coding: utf-8 -*-
+"""291_supp13_ph_substate_dotplot_v2.py — cleaned labels, size legend, colorbar, revised names."""
+import os
+import numpy as np, pandas as pd, anndata as ad
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+from matplotlib import font_manager as fm
+from matplotlib.lines import Line2D
+
+OUT=r"D:\桌面\single cell\analysis_output"; DEST=os.path.join(OUT,"figures_pub","Supplementary_niche")
+os.environ.setdefault("MPLCONFIGDIR",os.path.join(OUT,".mplconfig"))
+assert fm.findfont("Times New Roman", fallback_to_default=False)
+plt.rcParams.update({"font.family":"serif","font.serif":["Times New Roman"],"font.size":7,"axes.titlesize":8,
+ "axes.labelsize":7,"xtick.labelsize":6.5,"ytick.labelsize":6.5,"axes.linewidth":0.6,
+ "savefig.facecolor":"white","svg.fonttype":"none"})
+
+a=ad.read_h5ad(os.path.join(OUT,"step3","step3_lyo_scores.h5ad"),backed="r")
+ph=pd.read_csv(os.path.join(OUT,"dynamic_subpop_subclusters","PH_subcluster_umap.csv")); ph.columns=["cell","group","sub","u1","u2"]
+sub=ph.set_index("cell")["sub"]; keep=np.isin(a.obs_names,sub.index)
+A=a[keep]; s=sub.reindex(A.obs_names).values
+genes=[("s0","PEN-3","ncbi_113808997"),("s0","LOC113819543","ncbi_113819543"),("s0","LOC113819837","ncbi_113819837"),("s0","LOC113830563","ncbi_113830563"),("s0","LOC113802679","ncbi_113802679"),
+       ("s1","LOC113808957","ncbi_113808957"),("s1","LOC113808628","ncbi_113808628"),("s1","LOC113800422","ncbi_113800422"),("s1","Igfbp7","ncbi_113811702"),("s1","ccnd2","ncbi_113814652"),
+       ("s2","LOC113810024","ncbi_113810024"),("s2","THBS4","ncbi_113823118"),("s2","TGM1","ncbi_113823945"),
+       ("s3","LOC113818748","gene-LOC113818748"),("s3","LOC113823090","gene-LOC113823090"),("s3","LOC113823089","gene-LOC113823089"),
+       ("context","PPAF2","ncbi_113812814"),("context","Grik2","ncbi_113823802")]
+rows=[]
+for grp,name,key in genes:
+    hit=None
+    if key in A.var_names: hit=key
+    elif key.replace("gene-","") in A.var_names: hit=key.replace("gene-","")
+    if hit is None: print("missing",name,key); continue
+    x=np.asarray(A[:,hit].layers["lognorm"].todense()).ravel()
+    for s_ in [0,1,2,3]:
+        m=s==s_; rows.append({"group":grp,"gene":name,"sub":s_,"mean":float(x[m].mean()),"pct":float((x[m]>0).mean()*100)})
+d=pd.DataFrame(rows); d.to_csv(os.path.join(DEST,"Supp13_PH_substate_markers.csv"),index=False,encoding="utf-8-sig")
+order=d.drop_duplicates("gene").gene.tolist()
+X=[];Y=[];SZ=[];CC=[]
+for i,g in enumerate(order):
+    for j in [0,1,2,3]:
+        r=d[(d.gene==g)&(d["sub"]==j)]
+        if len(r)==0: continue
+        r=r.iloc[0]; X.append(j);Y.append(i);SZ.append(max(r.pct*1.1,2));CC.append(r["mean"])
+fig,ax=plt.subplots(figsize=(5.4,5.4))
+sc=ax.scatter(X,Y,s=SZ,c=CC,cmap="Reds",vmin=0,vmax=d["mean"].max(),edgecolors="#666",linewidths=0.25)
+ax.set_xticks([0,1,2,3]); ax.set_xticklabels(["s0\nECM/ribosome","s1\nPH progenitor","s2\nImmune/ECM","s3\nTGM1-low"],fontsize=6.0)
+ax.set_yticks(range(len(order))); ax.set_yticklabels(order,fontsize=6.2)
+ax.set_xlim(-0.6,3.6); ax.set_ylim(len(order)-0.5,-0.5); ax.set_title("PH substate markers")
+for sp in ["top","right"]: ax.spines[sp].set_visible(False)
+# colorbar
+cb=plt.colorbar(sc,ax=ax,fraction=0.04,pad=0.02); cb.set_label("Mean expression (log1p CP10K)",fontsize=6); cb.ax.tick_params(labelsize=5.5)
+# size legend below
+# dedicated bubble-size legend (guaranteed visible)
+leg=fig.add_axes([0.76,0.04,0.20,0.24]); leg.axis("off")
+leg.text(0.0,0.98,"% expressing",fontsize=6.2,fontweight="bold")
+for k,v in enumerate([0,25,50,75]):
+    yy=0.76-k*0.21
+    leg.scatter(0.18,yy,s=max(v*1.1,14),c="#BBBBBB",edgecolors="#666",linewidths=0.4)
+    leg.text(0.42,yy,f"{v}%",va="center",fontsize=6.0)
+leg.set_xlim(0,1); leg.set_ylim(0,1)
+fig.subplots_adjust(left=0.18,right=0.72,top=0.93,bottom=0.12)
+for ext,kw in [("png",dict(dpi=300)),("svg",dict(format="svg")),("tiff",dict(format="tiff",dpi=1200,pil_kwargs={"compression":"tiff_lzw"}))]:
+    fig.savefig(os.path.join(DEST,ext,"Supp13_PH_substate_markers."+ext),bbox_inches="tight",**kw)
+print("saved")

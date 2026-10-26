@@ -1,0 +1,12 @@
+p=r"D:\桌面\single cell\analysis_output\scripts\208_three_column_alluvial.py"
+s=open(p,encoding="utf-8").read()
+s=s.replace('fig=plt.figure(figsize=(7.2,4.9),facecolor="white"); ax=fig.add_axes([0.02,0.10,0.96,0.80]); ax.axis("off")','fig=plt.figure(figsize=(5.4,4.05),facecolor="white"); ax=fig.add_axes([0.02,0.10,0.96,0.80]); ax.axis("off")')
+s=s.replace('ax.scatter([0.075],[y],s=26,c="#555555",zorder=8)\n  ax.text(0.06,y,p,ha="right",va="center",fontsize=4.8)','ax.scatter([0.075],[y],s=26,c="#555555",zorder=8)\n  ax.text(0.06,y,p,ha="right",va="center",fontsize=4.8)')
+s=s.replace('ax.scatter([0.50],[y],s=45,c=col,zorder=8)\n  ax.text(0.50,y+0.055,O2[ORGS.index(o)],ha="center",va="bottom",fontsize=4.7,color=col,weight="bold")','ax.scatter([0.30],[y],s=45,c=col,zorder=8)\n  ax.text(0.30,y+0.055,O2[ORGS.index(o)],ha="center",va="bottom",fontsize=4.7,color=col,weight="bold")')
+s=s.replace('x,y=bezier(0.075,left_y[p],0.50,mid_y[r.organ])','x,y=bezier(0.075,left_y[p],0.30,mid_y[r.organ])')
+s=s.replace('x,y=bezier(0.50,y0,0.905,yy)','x,y=bezier(0.30,y0,0.51,yy)')
+s=s.replace('ax.scatter([0.91],[yy],s=18,c=COL[o],edgecolors="white",linewidths=0.4,zorder=8)\n   ax.text(0.925,yy,lab,ha="left",va="center",fontsize=4.5,color=COL[o])','ax.scatter([0.51],[yy],s=18,c=COL[o],edgecolors="white",linewidths=0.4,zorder=8)\n   ax.text(0.525,yy,lab,ha="left",va="center",fontsize=4.5,color=COL[o])')
+s=s.replace('fig.savefig(p,dpi=400,bbox_inches="tight",pad_inches=0.04,facecolor="white")','fig.savefig(p,dpi=400,bbox_inches="tight",pad_inches=0.04,facecolor="white")')
+s=s.replace('"Fig6_alluvial_threecolumn_preview.png"','"Fig6_alluvial_threecolumn_compact_preview.png"')
+open(p,"w",encoding="utf-8").write(s)
+print("patched")
